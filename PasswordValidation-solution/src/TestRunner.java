@@ -44,6 +44,7 @@ public class TestRunner {
 
         // TODO: boundary อื่นๆ ที่คุณคิดว่าจำเป็น
         check("emty pw",PasswordValidator.validate("") == false);
+        check(" pw special",PasswordValidator.validate("!@#$%^&*<>") == false);
 
         System.out.println("==================================");
         System.out.printf("PASS %d / FAIL %d%n", pass, fail);
